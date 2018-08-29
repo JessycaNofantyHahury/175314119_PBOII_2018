@@ -11,6 +11,45 @@ package model;
  */
 public class Pasien {
     
-    private String pasien;
+    private String Nama;
+    private String Alamat;
+    private String NoRekamMedis;
+    private String TempatLahir;
+    private int TanggalLahir;
+    private int BulanLahir;
+    private int TahunLahir;
+    
+    public Pasien (){}
+
+    public String getNama() {
+        return Nama;
+    }
+
+    public void setNama(String Nama) {
+        this.Nama = Nama;
+    }
+
+    public String getAlamat() {
+        return Alamat;
+    }
+
+    public void setAlamat(String Alamat) {
+        this.Alamat = Alamat;
+    }
+
+    public String getNoRekamMedis() {
+        return NoRekamMedis;
+    }
+
+    public void setNoRekamMedis(String NoRekamMedis) {
+        this.NoRekamMedis = NoRekamMedis;
+    }
+    
+    
+    
+        
+    
+    
+    
     
 }
