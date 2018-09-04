@@ -15,7 +15,7 @@ public class Dokter {
     private String nama; //attribute nama yang dideklarasikan sebagai private dengan tipe data String
     private String alamat; //attribute alamat  yang dideklarasikan sebagai private dengan tipe data String
     private String tempatLahir; //attribute tempatLahir yang dideklarasikan sebagai private dengan tipe data String
-    private int tanggalLahir; //attribute tanggalLahir yang dideklarasikan sebagai private dengan tipe data String
+    private int tanggalLahir; //attribute tanggalLahir yang dideklarasikan sebagai private dengan tipe data integer
 
     public String getNoPegawai() { // method untuk membaca Nilai balikan dari attribute noPegawai
         return noPegawai;
