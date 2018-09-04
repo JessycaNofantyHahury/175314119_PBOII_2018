@@ -20,7 +20,7 @@ public class AntrianPasien {
         return Tanggal_antrian;
     }
 
-    public void setTanggal_antrian(int Tanggal_antrian) { // method dengan parameter berupa obyek Tanggal_antrian yang bertipe interger
+    public void setTanggal_antrian(int Tanggal_antrian) { // method dengan parameter berupa obyek Tanggal_antrian yang bertipe integer
         this.Tanggal_antrian = Tanggal_antrian;
     }
 
@@ -28,7 +28,7 @@ public class AntrianPasien {
         return Bulan_antrian;
     }
 
-    public void setBulan_antrian(int Bulan_antrian) { // method dengan parameter berupa obyek Bulan_antrian yang bertipe interger  
+    public void setBulan_antrian(int Bulan_antrian) { // method dengan parameter berupa obyek Bulan_antrian yang bertipe integer  
         this.Bulan_antrian = Bulan_antrian;
     }
 
@@ -36,7 +36,7 @@ public class AntrianPasien {
         return Tahun_antrian;
     }
 
-    public void setTahun_antrian(int Tahun_antrian) { // method dengan parameter berupa obyek Tahun_antrian yang bertipe interger
+    public void setTahun_antrian(int Tahun_antrian) { // method dengan parameter berupa obyek Tahun_antrian yang bertipe integer
         this.Tahun_antrian = Tahun_antrian;
     }
 

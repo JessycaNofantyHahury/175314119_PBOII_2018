@@ -53,7 +53,7 @@ public class Dokter {
         return tanggalLahir;
     }
 
-    public void setTanggalLahir(int tanggalLahir) { // method dengan parameter berupa obyek tanggalLahir yang bertipe interger
+    public void setTanggalLahir(int tanggalLahir) { // method dengan parameter berupa obyek tanggalLahir yang bertipe integer
         this.tanggalLahir = tanggalLahir;
     }
 

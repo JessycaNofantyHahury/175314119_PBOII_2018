@@ -9,7 +9,7 @@ package model;
  *
  * @author admin
  */
-public class Pasien extends AntrianPasien {
+public class Pasien extends AntrianPasien { //
 
     private String Nama, Alamat, TempatLahir; // attribute Nama, Alamat, Tempat Lahir yang dideklarasikan sebagai private 
     //dengan tipe data String
@@ -60,7 +60,7 @@ public class Pasien extends AntrianPasien {
 
         //throws digunakan untuk melempar suatu eksepsi dalam program    
         // digunakan pada saat mendeklarasi suatu method.
-        // method dengan parameter berupa obyek NoRekamMedis yang bertipe Interger
+        // method dengan parameter berupa obyek NoRekamMedis yang bertipe Integer
 
         if (NoRekamMedis < 21 && NoRekamMedis > 5) { // jika NoRekamMedis Kurang dari 21 dan lebih Dari 5 maka 
             this.NoRekamMedis = NoRekamMedis;       //Menyimpan Nilai dari obyek NoRekamMedis ke attribute NoRekamMedis  
@@ -79,7 +79,7 @@ public class Pasien extends AntrianPasien {
 
          //throws digunakan untuk melempar suatu eksepsi dalam program    
         // digunakan pada saat mendeklarasi suatu method.
-        // method dengan parameter berupa obyek TanggalLahir yang bertipe Interger
+        // method dengan parameter berupa obyek TanggalLahir yang bertipe Integer
 
         if (TanggalLahir > 0 && TanggalLahir <= 31) { // jika TanggalLahir lebih dari 0 dan kurang dari sama dengan 31 maka, 
             this.TanggalLahir = TanggalLahir;        //Menyimpan Nilai dari obyek TanggalLahir ke attribute TanggalLahir
@@ -94,7 +94,7 @@ public class Pasien extends AntrianPasien {
 
         //throws digunakan untuk melempar suatu eksepsi dalam program    
         // digunakan pada saat mendeklarasi suatu method.
-        // method dengan parameter berupa obyek BulanLahir yang bertipe Interger
+        // method dengan parameter berupa obyek BulanLahir yang bertipe Integer
 
         if (BulanLahir > 0 && BulanLahir <= 12) { // jika BulanLahir lebih dari 0 dan kurang dari sama dengan 12 maka,
             this.BulanLahir = BulanLahir;        // Menyimpan Nilai dari obyek BulanLahir ke attribute BulanLahir
@@ -109,7 +109,7 @@ public class Pasien extends AntrianPasien {
 
         //throws digunakan untuk melempar suatu eksepsi dalam program    
         // digunakan pada saat mendeklarasi suatu method.
-        // method dengan parameter berupa obyek TahunLahir yang bertipe Interger
+        // method dengan parameter berupa obyek TahunLahir yang bertipe Integer
 
         if (TahunLahir > 0) {              // jika TahunLahir lebih dari 0 maka,
             this.TahunLahir = TahunLahir;     //Menyimpan Nilai dari obyek TahunLahir ke attribute TahunLahir
