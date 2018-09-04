@@ -9,82 +9,114 @@ package model;
  *
  * @author admin
  */
-public class Pasien {
-    
-    private String Nama;
-    private String Alamat;
-    private String NoRekamMedis;
-    private String TempatLahir;
-    private int TanggalLahir;
-    private int BulanLahir;
-    private int TahunLahir;
-    
-    public Pasien (){}
+public class Pasien extends AntrianPasien {
 
-    public String getNama() {
+    private String Nama, Alamat, TempatLahir; // attribute Nama, Alamat, Tempat Lahir yang dideklarasikan sebagai private 
+    //dengan tipe data String
+    private int TanggalLahir, BulanLahir, TahunLahir, NoRekamMedis;
+    // attribute TanggalLahir, BulanLahir, TahunLahir, NoRekamMedis yang dideklarasikan sebagai private dengan tipe data Interger
+
+    public Pasien() {
+    }
+
+    public String getNama() {  // method untuk membaca Nilai balikan dari attribute Nama
         return Nama;
     }
 
-    public void setNama(String Nama) {
-        this.Nama = Nama;
+    public void setNama(String Nama) { // method dengan parameter berupa obyek Nama yang bertipe String         
+        this.Nama = Nama;               //Menyimpan Nilai dari obyek Nama ke attribute Nama
+
     }
 
-    public String getAlamat() {
+    public String getAlamat() { // method untuk membaca Nilai balikan dari attribute Alamat
         return Alamat;
     }
 
-    public void setAlamat(String Alamat) {
-        this.Alamat = Alamat;
+    public String getTempatLahir() { // method untuk membaca Nilai balikan dari attribute TempatLahir
+        return TempatLahir;
     }
 
-    public String getNoRekamMedis() {
+    public int getTanggalLahir() { // method untuk membaca Nilai balikan dari attribute TanggalLahir
+        return TanggalLahir;
+    }
+
+    public int getBulanLahir() { // method untuk membaca Nilai balikan dari attribute BulanLahir
+        return BulanLahir;
+    }
+
+    public int getTahunLahir() { // method untuk membaca Nilai balikan dari attribute TahunLahir
+        return TahunLahir;
+    }
+
+    public void setAlamat(String Alamat) { // method dengan parameter berupa obyek Alamat yang bertipe String  
+        this.Alamat = Alamat;               //Menyimpan Nilai dari obyek Alamat ke attribute Alamat
+    }
+
+    public int getNoRekamMedis() { // method untuk membaca Nilai balikan dari attribute NoRekamMedis
         return NoRekamMedis;
     }
 
-    public void setNoRekamMedis(String NoRekamMedis) {
-        this.NoRekamMedis = NoRekamMedis;
+    public void setNoRekamMedis(int NoRekamMedis) throws Exception { 
+
+        //throws digunakan untuk melempar suatu eksepsi dalam program    
+        // digunakan pada saat mendeklarasi suatu method.
+        // method dengan parameter berupa obyek NoRekamMedis yang bertipe Interger
+
+        if (NoRekamMedis < 21 && NoRekamMedis > 5) { // jika NoRekamMedis Kurang dari 21 dan lebih Dari 5 maka 
+            this.NoRekamMedis = NoRekamMedis;       //Menyimpan Nilai dari obyek NoRekamMedis ke attribute NoRekamMedis  
+
+        } else {// jika tidak maka sistem akan mencetak seperti berikut
+            throw new Exception("No Rekam Medis Dibatas 6 - 20");
+        }
+
     }
 
-    public void setTempatLahir(String TempatLahir) {
-        this.TempatLahir = TempatLahir;
+    public void setTempatLahir(String TempatLahir) { // method dengan parameter berupa obyek TempatLahir yang bertipe String  
+        this.TempatLahir = TempatLahir;               //Menyimpan Nilai dari obyek TempatLahir ke attribute TempatLahir
     }
 
-    public void setTanggalLahir(int TanggalLahir)throws Exception {
-        
-        if(TanggalLahir > 0 && TanggalLahir <= 31){
-            this.TanggalLahir = TanggalLahir;
-        }else{
+    public void setTanggalLahir(int TanggalLahir) throws Exception {
+
+         //throws digunakan untuk melempar suatu eksepsi dalam program    
+        // digunakan pada saat mendeklarasi suatu method.
+        // method dengan parameter berupa obyek TanggalLahir yang bertipe Interger
+
+        if (TanggalLahir > 0 && TanggalLahir <= 31) { // jika TanggalLahir lebih dari 0 dan kurang dari sama dengan 31 maka, 
+            this.TanggalLahir = TanggalLahir;        //Menyimpan Nilai dari obyek TanggalLahir ke attribute TanggalLahir
+
+        } else { // jika tidak maka sistem akan mencetak seperti berikut
             throw new Exception("Tanggal Salah...");
         }
-        
+
     }
 
-    public void setBulanLahir(int BulanLahir)throws Exception {
-        
-        if(BulanLahir > 0 && BulanLahir <= 12){
-           this.BulanLahir = BulanLahir; 
-        }else{
+    public void setBulanLahir(int BulanLahir) throws Exception {
+
+        //throws digunakan untuk melempar suatu eksepsi dalam program    
+        // digunakan pada saat mendeklarasi suatu method.
+        // method dengan parameter berupa obyek BulanLahir yang bertipe Interger
+
+        if (BulanLahir > 0 && BulanLahir <= 12) { // jika BulanLahir lebih dari 0 dan kurang dari sama dengan 12 maka,
+            this.BulanLahir = BulanLahir;        // Menyimpan Nilai dari obyek BulanLahir ke attribute BulanLahir
+
+        } else {// jika tidak maka sistem akan mencetak seperti berikut
             throw new Exception("Bulan Salah...");
         }
-        
+
     }
 
-    public void setTahunLahir(int TahunLahir)throws Exception {
-        
-        if(TahunLahir > 0){
-        
-        this.TahunLahir = TahunLahir;
-    }else{
+    public void setTahunLahir(int TahunLahir) throws Exception { 
+
+        //throws digunakan untuk melempar suatu eksepsi dalam program    
+        // digunakan pada saat mendeklarasi suatu method.
+        // method dengan parameter berupa obyek TahunLahir yang bertipe Interger
+
+        if (TahunLahir > 0) {              // jika TahunLahir lebih dari 0 maka,
+            this.TahunLahir = TahunLahir;     //Menyimpan Nilai dari obyek TahunLahir ke attribute TahunLahir
+
+        } else {// jika tidak maka sistem akan mencetak seperti berikut
             throw new Exception("Tahun Salah...");
-        }     
-    
-    
-    
-    
-    
-        
-    
-    
-    
-    
-}}
+        }
+
+    }
+}
