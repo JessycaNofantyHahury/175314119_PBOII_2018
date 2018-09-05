@@ -18,6 +18,7 @@ public class TestPasien {
         Pasien test = new Pasien();
         test.setNama("Jessyca");
         
+        
        
     }
         
