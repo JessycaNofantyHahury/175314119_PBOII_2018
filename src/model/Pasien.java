@@ -19,6 +19,7 @@ public class Pasien extends AntrianPasien { //
     public Pasien() {
     }
 
+
     public String getNama() {  // method untuk membaca Nilai balikan dari attribute Nama
         return Nama;
     }

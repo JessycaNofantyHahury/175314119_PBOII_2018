@@ -10,7 +10,7 @@ package model;
  *
  * @author user
  */
-class Klinik {
+public class Klinik {
     
      private String idklinik, nama; //attribute dari kelas Klinik yang dideklarasikan sebagai private dengan tipe data String
     
