@@ -19,8 +19,10 @@ public class DaftarPasienDialog extends JDialog {
     private JLabel JudulLabel;
     private JLabel NamaLabel;
     private JLabel Alamat;
+    private JLabel TTL;
     private JTextField namaText;
     private JTextField AlamatText;
+    private JTextField TTLText;
     private JButton saveButton;
 
     public DaftarPasienDialog() {
@@ -47,6 +49,10 @@ public class DaftarPasienDialog extends JDialog {
         Alamat.setBounds(50, 60, 60, 180);
         this.add(Alamat);
 
+        Alamat = new JLabel("TTL ");
+        Alamat.setBounds(50, 90, 90, 180);
+        this.add(Alamat);
+
         this.setLayout(null);
         namaText = new JTextField();
         namaText.setBounds(100, 100, 80, 20);
@@ -56,6 +62,11 @@ public class DaftarPasienDialog extends JDialog {
         AlamatText = new JTextField();
         AlamatText.setBounds(100, 140, 80, 20);
         this.add(AlamatText);
+
+        this.setLayout(null);
+        TTLText = new JTextField();
+        TTLText.setBounds(100, 170, 80, 20);
+        this.add(TTLText);
 
         saveButton = new JButton("Simpan");
         saveButton.setBounds(145, 200, 80, 20);

@@ -27,14 +27,14 @@ public class TestPasien {
         Klinik klnk = new Klinik();
        // membuat objek baru dari kelas Klinik yang dideklarasikan dengan nama kl
 
-        pasien.setNoRekamMedis(7);
-        //* input nilai 7 sebagai parameter dari menthod setnoRekamMedis() yang dijalankan oleh objek pas dari kelas Pasien
-        pasien.setAlamat("Jl. SD Percobaan, no.25 Rt 3 Rw 3");
-        //* input keterangan berupa "jl. sesama, no.1 Rt 2 Rw 3" yang digunakan sebagai parameter menthod setAlamat() yang dijalankan objek pasien daeri kelas pasien
-        pasien.setBulanLahir(1);
-        /* input nilai 11 sebagai parameter dari menthod setBulanLAhir() yang dijalankan oleh objek pasien dari kelas Pasien*/
-        pasien.setNama("Jessyca Hahury");
-        /* input keterangan berupa "parjo" yang digunakan sebagai parameter menthod setNamat() yang dijalankan objek pasien dari kelas pasien*/
+//        pasien.setNoRekamMedis("1765");
+//        //* input nilai 7 sebagai parameter dari menthod setnoRekamMedis() yang dijalankan oleh objek pas dari kelas Pasien
+//        pasien.setAlamat("Jl. SD Percobaan, no.25 Rt 3 Rw 3");
+//        //* input keterangan berupa "jl. sesama, no.1 Rt 2 Rw 3" yang digunakan sebagai parameter menthod setAlamat() yang dijalankan objek pasien daeri kelas pasien
+//        pasien.setBulanLahir(1);
+//        /* input nilai 11 sebagai parameter dari menthod setBulanLAhir() yang dijalankan oleh objek pasien dari kelas Pasien*/
+//        pasien.setNama("Jessyca Hahury");
+//        /* input keterangan berupa "parjo" yang digunakan sebagai parameter menthod setNamat() yang dijalankan objek pasien dari kelas pasien*/
 
         pasien.setTanggalLahir(25);
         /* input nilai 2 sebagai parameter dari menthod setTanggalLahir() yang dijalankan oleh objek pasien dari kelas Pasien*/

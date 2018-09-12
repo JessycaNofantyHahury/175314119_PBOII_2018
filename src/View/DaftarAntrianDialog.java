@@ -36,13 +36,14 @@ public class DaftarAntrianDialog extends JDialog {
 
     public void init() {
         this.setLayout(null);
-        NamaLabel = new JLabel("Nama ");
+
+        JudulLabel = new JLabel("Tambah Antri");
+        JudulLabel.setBounds(140, 30, 100, 20);
+
+        this.add(JudulLabel);
+        NamaLabel = new JLabel("No RM ");
         NamaLabel.setBounds(50, 70, 70, 80);
         this.add(NamaLabel);
-
-        JudulLabel = new JLabel("DAFTAR PASIEN");
-        JudulLabel.setBounds(140, 30, 100, 20);
-        this.add(JudulLabel);
 
         NoRM = new JLabel("NoRM");
         NoRM.setBounds(50, 50, 50, 50);
@@ -55,7 +56,7 @@ public class DaftarAntrianDialog extends JDialog {
         saveButton = new JButton("Simpan");
         saveButton.setBounds(145, 200, 80, 20);
         this.add(saveButton);
-        
+
         this.setLayout(null);
         NoRMText = new JTextField();
         NoRMText.setBounds(100, 70, 80, 20);

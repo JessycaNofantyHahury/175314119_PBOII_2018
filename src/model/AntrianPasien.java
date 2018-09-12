@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author user
@@ -12,9 +14,10 @@ package model;
 public class AntrianPasien {
 
     private int Tanggal_antrian, Bulan_antrian, Tahun_antrian; // attribute dari kelas AntrianPasien yang dideklarasikan sebagai private
-                                                                    //dengan tipe data Interge
+    //dengan tipe data Interge
     private Pasien daftarPasien[]; // attribute daftarPasien array  yang dideklarasikan sebagai Private dengan tipe data Pasien 
     private Klinik klinik; //attribute klinik yang dideklarasikan sebagai Private dengan tipe data Klinik 
+    public static ArrayList<Pasien> daftarPasienPasienBaru = new ArrayList<Pasien>();
 
     public int getTanggal_antrian() { // method untuk membaca Nilai balikan dari attribute Tanggal_antrian
         return Tanggal_antrian;
@@ -55,4 +58,5 @@ public class AntrianPasien {
     public void setKlinik(Klinik klinik) { // method dengan parameter berupa obyek klinik yang bertipe Klinik
         this.klinik = klinik;
     }
+
 }
