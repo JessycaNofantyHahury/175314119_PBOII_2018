@@ -5,7 +5,7 @@
  */
 package Test;
 
-import View.DaftarPasienDialog;
+import View.TambahPasienBaruDialog;
 
 /**
  *
@@ -16,7 +16,7 @@ public class TestViewPasien {
     public static void main(String[] args) {
         
         
-        DaftarPasienDialog test = new DaftarPasienDialog("Daftar Pasien");
+        TambahPasienBaruDialog test = new TambahPasienBaruDialog("Daftar Pasien");
         test.setSize(400, 300);
         test.setVisible(true);
     }

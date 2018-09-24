@@ -5,24 +5,28 @@
  */
 package TestPraktikum;
 
-import View.DaftarAntrianDialog;
+import View.MainFrame;
 
 /**
  *
- * @author admin
+ * @author W I N D O W S 1 0
  */
-public class TestTambahAntrianDialog {
+public class TestMainFrame {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+
+        
+         public static void main(String[] args) {
         // TODO code application logic here
         
-        DaftarAntrianDialog test = new DaftarAntrianDialog();
-        test.setSize(550, 400);
-        test.setVisible(true);
-}
+        MainFrame mf = new MainFrame();
+        mf.setSize(300, 400);
+        mf.setVisible(true);
+        
+  }
+
     }
     
 

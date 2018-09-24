@@ -6,6 +6,7 @@
 package model;
 
 import java.util.ArrayList;
+import static model.Pasien.daftarPasienKlinik;
 
 /**
  *
@@ -17,8 +18,23 @@ public class AntrianPasien {
     //dengan tipe data Interge
     private Pasien daftarPasien[]; // attribute daftarPasien array  yang dideklarasikan sebagai Private dengan tipe data Pasien 
     private Klinik klinik; //attribute klinik yang dideklarasikan sebagai Private dengan tipe data Klinik 
-    public static ArrayList<Pasien> daftarPasienPasienBaru = new ArrayList<Pasien>();
+    public static ArrayList<Pasien> daftarAntrian = new ArrayList<Pasien>();
+    //private AntrianPasien daftarAntrian[];
+    public static void Mendaftar (Pasien pasien, int tanggal, int bulan, int tahun){
+      
+    }
+    
+    public Pasien cariPasien(String string){
+   
+     for (int i = 0; i < daftarAntrian.size(); i++) {
+            if (daftarAntrian.get(i).NoRekamMedis == string) {
+                return daftarAntrian.get(i);
+            }
 
+        }
+        return null;
+    }
+    
     public int getTanggal_antrian() { // method untuk membaca Nilai balikan dari attribute Tanggal_antrian
         return Tanggal_antrian;
     }
