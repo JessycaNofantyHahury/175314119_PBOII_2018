@@ -158,6 +158,7 @@ public class DaftarAntrianDialog extends JDialog implements  ActionListener{
             baru.setNama(namaText.getText());
             baru.setAlamat(AlamatText.getText());
             baru.setNoRekamMedis(NoRMText.getText());
+           
             
 
             Pasien.tambahPasienBaru(baru);

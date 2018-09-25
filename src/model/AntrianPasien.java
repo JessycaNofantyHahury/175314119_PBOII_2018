@@ -14,6 +14,10 @@ import static model.Pasien.daftarPasienKlinik;
  */
 public class AntrianPasien {
 
+    private static int cariPasien(int tanggal, int bulan, int tahun, Klinik klinik) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private int Tanggal_antrian, Bulan_antrian, Tahun_antrian; // attribute dari kelas AntrianPasien yang dideklarasikan sebagai private
     //dengan tipe data Interge
     private Pasien daftarPasien[]; // attribute daftarPasien array  yang dideklarasikan sebagai Private dengan tipe data Pasien 
@@ -21,18 +25,35 @@ public class AntrianPasien {
     public static ArrayList<Pasien> daftarAntrian = new ArrayList<Pasien>();
     //private AntrianPasien daftarAntrian[];
     public static void Mendaftar (Pasien pasien, int tanggal, int bulan, int tahun){
-      
+       
+        daftarAntrian.add(pasien);
     }
+        
     
-    public Pasien cariPasien(String string){
+    
+    public static int cariPasien(String NoRM){
    
      for (int i = 0; i < daftarAntrian.size(); i++) {
-            if (daftarAntrian.get(i).NoRekamMedis == string) {
-                return daftarAntrian.get(i);
-            }
+            if (NoRM.equalsIgnoreCase(daftarAntrian.get(i).getNoRekamMedis())) {
+                return i;
 
         }
-        return null;
+        return -1;
+    }
+    
+    //public static Pasien cariPasien(String NoRM, int tanggal, int bulan, int tahun)
+    
+    public static void buatAntrian(int tanggal, int bulan, int tahun, Klinik klinik) throws Exception{
+        
+        AntrianPasien antri = new AntrianPasien();
+        antri.setTanggal_antrian(tanggal);
+        antri.setBulan_antrian(bulan);
+        antri.setTahun_antrian(tahun);
+        antri.setKlinik(klinik);
+        
+        if(cariPasien(tanggal, bulan, tahun, klinik)< 0){
+            daftarAntrian.add(antri);
+        }
     }
     
     public int getTanggal_antrian() { // method untuk membaca Nilai balikan dari attribute Tanggal_antrian
