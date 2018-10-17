@@ -5,7 +5,13 @@
  */
 package model;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,7 +19,8 @@ import java.util.ArrayList;
  */
 public class Pasien {
 
-    //String Nama;
+   
+
 
     public String Nama,Alamat, TempatLahir, nik, NoRekamMedis; // attribute Nama, Alamat, Tempat Lahir yang dideklarasikan sebagai private 
     //dengan tipe data String
@@ -37,6 +44,48 @@ public class Pasien {
         }
         return null;
     }
+    
+    public static void simpanDaftarPasien(File file) throws IOException{
+        
+       try {
+            FileOutputStream fos = new FileOutputStream(file);
+            for (int i = 0; i < daftarPasienKlinik.size(); i++) {
+                String data = daftarPasienKlinik.get(i).toString();
+                fos.write(data.getBytes());
+            }
+            fos.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+}
+    
+        }
+     
+   
+      public static void bacaDaftarPasien(File file) {
+//        
+//          try {
+//            FileOutputStream fos1 = new FileOutputStream(file);
+//            for (int i = 0; i < daftarPasienKlinik.size(); i++) {
+//                String data = daftarPasienKlinik.get(i).toString();
+//                fos1.write(data.getBytes());
+//            }
+//            fos1.close();
+//        } catch (FileNotFoundException ex) {
+//            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (IOException ex) {
+//            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+//}
+//    
+        }
+          
+      
+       public static Object getDaftarPasien() {
+      
+           return daftarPasienKlinik;
+         }
+
     
     public Pasien(String Nama, String Alamat, String TempatLahir, int TanggalLahir, int BulanLahir, int TahunLahir, String nik) {
         this.Nama = Nama;
@@ -95,57 +144,21 @@ public class Pasien {
         this.BulanLahir = BulanLahir;
     }
 
-    public void setNoRekamMedis(String noRekamMedis) throws NumberFormatException {
-        if (NoRekamMedis.toCharArray().length >= 6) {
-            this.NoRekamMedis = noRekamMedis;
-        } else {
-            throw new NumberFormatException("Nomor Rekam Medis Salah");
-        }
+    public void setNoRekamMedis(String noRekamMedis)  {
+        
+        this.NoRekamMedis = noRekamMedis;
+//        if (NoRekamMedis.toCharArray().length >= 6) {
+//            this.NoRekamMedis = noRekamMedis;
+//        } else {
+//            throw new NumberFormatException("Nomor Rekam Medis Salah");
+//        }
     }
 
     public void setTempatLahir(String TempatLahir) { // method dengan parameter berupa obyek TempatLahir yang bertipe String  
         this.TempatLahir = TempatLahir;               //Menyimpan Nilai dari obyek TempatLahir ke attribute TempatLahir
     }
 
-//    public void setTanggalLahir(int TanggalLahir) throws Exception {
-//
-//        //throws digunakan untuk melempar suatu eksepsi dalam program    
-//        // digunakan pada saat mendeklarasi suatu method.
-//        // method dengan parameter berupa obyek TanggalLahir yang bertipe Integer
-//        if (TanggalLahir > 0 && TanggalLahir <= 31) { // jika TanggalLahir lebih dari 0 dan kurang dari sama dengan 31 maka, 
-//            this.TanggalLahir = TanggalLahir;        //Menyimpan Nilai dari obyek TanggalLahir ke attribute TanggalLahir
-//
-//        } else { // jika tidak maka sistem akan mencetak seperti berikut
-//            throw new Exception("Tanggal Salah...");
-//        }
-//
-//    }
-//    public void setBulanLahir(int BulanLahir) throws Exception {
-//
-//        //throws digunakan untuk melempar suatu eksepsi dalam program    
-//        // digunakan pada saat mendeklarasi suatu method.
-//        // method dengan parameter berupa obyek BulanLahir yang bertipe Integer
-//        if (BulanLahir > 0 && BulanLahir <= 12) { // jika BulanLahir lebih dari 0 dan kurang dari sama dengan 12 maka,
-//            this.BulanLahir = BulanLahir;        // Menyimpan Nilai dari obyek BulanLahir ke attribute BulanLahir
-//
-//        } else {// jika tidak maka sistem akan mencetak seperti berikut
-//            throw new Exception("Bulan Salah...");
-//        }
-//
-//    }
-//    public void setTahunLahir(int TahunLahir) throws Exception {
-//
-//        //throws digunakan untuk melempar suatu eksepsi dalam program    
-//        // digunakan pada saat mendeklarasi suatu method.
-//        // method dengan parameter berupa obyek TahunLahir yang bertipe Integer
-//        if (TahunLahir > 0) {              // jika TahunLahir lebih dari 0 maka,
-//            this.TahunLahir = TahunLahir;     //Menyimpan Nilai dari obyek TahunLahir ke attribute TahunLahir
-//
-//        } else {// jika tidak maka sistem akan mencetak seperti berikut
-//            throw new Exception("Tahun Salah...");
-//        }
-//
-//    }
+//   
     public String getTempatLahir() {
         return TempatLahir;
     }
@@ -158,4 +171,8 @@ public class Pasien {
         return NoRekamMedis;
     }
 
+     @Override
+    public String toString() {
+        return NoRekamMedis+"\t"+Nama+ "\t" +Alamat+"\n";
+    }
 }
