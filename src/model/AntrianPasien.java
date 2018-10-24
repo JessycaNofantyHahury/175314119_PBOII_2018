@@ -6,7 +6,7 @@
 package model;
 
 import java.util.ArrayList;
-import static model.Pasien.daftarPasienKlinik;
+import static model.Pasien.daftarPasienAntri;
 
 /**
  *
@@ -14,9 +14,7 @@ import static model.Pasien.daftarPasienKlinik;
  */
 public class AntrianPasien {
 
-    private static int cariPasien(int tanggal, int bulan, int tahun, Klinik klinik) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     private int Tanggal_antrian, Bulan_antrian, Tahun_antrian; // attribute dari kelas AntrianPasien yang dideklarasikan sebagai private
     //dengan tipe data Interge
@@ -28,9 +26,18 @@ public class AntrianPasien {
        
         daftarAntrian.add(pasien);
     }
+
+    public AntrianPasien() {
+    }
+
+    public AntrianPasien(int Tanggal_antrian, int Bulan_antrian, int Tahun_antrian, Pasien[] daftarPasien, Klinik klinik) {
+        this.Tanggal_antrian = Tanggal_antrian;
+        this.Bulan_antrian = Bulan_antrian;
+        this.Tahun_antrian = Tahun_antrian;
+        this.daftarPasien = daftarPasien;
+        this.klinik = klinik;
+    }
         
-    
-    
     public static int cariPasien(String NoRM){
    
      for (int i = 0; i < daftarAntrian.size(); i++) {
@@ -38,23 +45,9 @@ public class AntrianPasien {
                 return i;
 
         }
-        return -1;
-    }
-    
-    //public static Pasien cariPasien(String NoRM, int tanggal, int bulan, int tahun)
-    
-    public static void buatAntrian(int tanggal, int bulan, int tahun, Klinik klinik) throws Exception{
         
-        AntrianPasien antri = new AntrianPasien();
-        antri.setTanggal_antrian(tanggal);
-        antri.setBulan_antrian(bulan);
-        antri.setTahun_antrian(tahun);
-        antri.setKlinik(klinik);
-        
-        if(cariPasien(tanggal, bulan, tahun, klinik)< 0){
-            daftarAntrian.add(antri);
-        }
-    }
+    } return -1;
+}
     
     public int getTanggal_antrian() { // method untuk membaca Nilai balikan dari attribute Tanggal_antrian
         return Tanggal_antrian;
@@ -96,4 +89,8 @@ public class AntrianPasien {
         this.klinik = klinik;
     }
 
+    @Override
+    public String toString() {
+        return Tanggal_antrian+"\t"+Bulan_antrian+ "\t" +Tahun_antrian+"\n";
+    }
 }
