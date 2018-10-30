@@ -164,11 +164,7 @@ public class Pasien {
     public void setNoRekamMedis(String noRekamMedis)  {
         
         this.NoRekamMedis = noRekamMedis;
-//        if (NoRekamMedis.toCharArray().length >= 6) {
-//            this.NoRekamMedis = noRekamMedis;
-//        } else {
-//            throw new NumberFormatException("Nomor Rekam Medis Salah");
-//        }
+
     }
 
     public void setTempatLahir(String TempatLahir) { // method dengan parameter berupa obyek TempatLahir yang bertipe String  
