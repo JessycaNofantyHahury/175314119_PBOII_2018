@@ -27,19 +27,27 @@ public class Pasien {
     //dengan tipe data String
     private int TanggalLahir, BulanLahir, TahunLahir;
     // attribute TanggalLahir, BulanLahir, TahunLahir, NoRekamMedis yang dideklarasikan sebagai private dengan tipe data Interge
-    public static ArrayList<Pasien> daftarPasienAntri
+    public static ArrayList<Pasien> daftarPasien
             = new ArrayList<Pasien>();
 
+    public static ArrayList<Pasien> getDaftarPasien() {
+        return daftarPasien;
+    }
+
+    public static void setDaftarPasienAntri(ArrayList<Pasien> daftarPasienAntri) {
+        Pasien.daftarPasien = daftarPasien;
+    }
+    
     public static void tambahPasienBaru(Pasien pasien) {
 
-        daftarPasienAntri.add(pasien);
+        daftarPasien.add(pasien);
     }
 
     public static Pasien cariPasien(String string) {
 
-        for (int i = 0; i < daftarPasienAntri.size(); i++) {
-            if (daftarPasienAntri.get(i).NoRekamMedis == string) {
-                return daftarPasienAntri.get(i);
+        for (int i = 0; i < daftarPasien.size(); i++) {
+            if (daftarPasien.get(i).NoRekamMedis == string) {
+                return daftarPasien.get(i);
             }
 
         }
@@ -50,8 +58,8 @@ public class Pasien {
         
        try {
             FileOutputStream fos = new FileOutputStream(file);
-            for (int i = 0; i < daftarPasienAntri.size(); i++) {
-                String data = daftarPasienAntri.get(i).toString();
+            for (int i = 0; i < daftarPasien.size(); i++) {
+                String data = daftarPasien.get(i).toString();
                 fos.write(data.getBytes());
             }
             fos.close();
@@ -93,12 +101,7 @@ public class Pasien {
             }
         }
         }
-          
-      
-       public static Object getDaftarPasien() {
-      
-           return daftarPasienAntri;
-         }
+         
 
     
     public Pasien(String Nama, String Alamat, String TempatLahir, int TanggalLahir, int BulanLahir, int TahunLahir, String nik) {
