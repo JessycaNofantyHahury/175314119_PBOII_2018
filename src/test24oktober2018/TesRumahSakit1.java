@@ -27,8 +27,7 @@ public class TesRumahSakit1 {
 
         RumahSakit rs = new RumahSakit("Panti Rapih", "Yogyakarta");
 
-        System.out.print(""+rs.getNama());
-        System.out.println(" "+rs.getAlamat());
+        System.out.println(rs.toString());
         System.out.println(pasien1.toString());
         System.out.println(pasien2.toString());
 

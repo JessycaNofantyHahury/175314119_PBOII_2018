@@ -107,29 +107,54 @@ public class RumahSakit {
 
     public void bacaDaftarPasien(File file) {
 
-    }
-
-    public void simpanObjekDaftarPasien(File file) 
-
-        throws IOException{
-        
-       try {
-            FileOutputStream fos = new FileOutputStream(file);
-            for (int i = 0; i < Daftarpasien.size(); i++) {
-                String data = Daftarpasien.get(i).toString();
-                fos.write(data.getBytes());
+         FileInputStream fis = null;
+        try {
+            String hasilBaca = "";
+            fis = new FileInputStream(file);
+            int dataInt;
+            
+            while ((dataInt = fis.read()) != -1) {
+                if ((char) dataInt != '\n') {
+                    hasilBaca = hasilBaca + (char) dataInt;
+                } else {
+                    Pasien temp = new Pasien();
+                    temp.setNama(hasilBaca);
+                    tambahPasienBaru(temp);
+                }
             }
-            fos.close();
+            System.out.println(hasilBaca);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
-}
+        } finally {
+            try {
+                fis.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+    public void simpanObjekDaftarPasien(File file) {
+//
+//        throws IOException{
+//        
+//       try {
+//            FileOutputStream fos = new FileOutputStream(file);
+//            for (int i = 0; i < Daftarpasien.size(); i++) {
+//                String data = Daftarpasien.get(i).toString();
+//                fos.write(data.getBytes());
+//            }
+//            fos.close();
+//        } catch (FileNotFoundException ex) {
+//            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (IOException ex) {
+//            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+//}
     
         }
-    
-
-    public void bacaObjekDaftarPasien(File file) {
+      public void bacaObjekDaftarPasien(File file) {
 
     }
     
@@ -229,6 +254,11 @@ public class RumahSakit {
 
     public static void setDaftarKlinik(ArrayList<Klinik> daftarKlinik) {
         RumahSakit.daftarKlinik = daftarKlinik;
+    }
+
+    @Override
+    public String toString() {
+         return ""+nama+ " " +alamat+"\n";
     }
     
     
